@@ -15,6 +15,7 @@ try {
     <?php // <!-- <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script> --> ?>
 </head>
 <body>
+This is cabinet
 <div id="root"></div>
 <script src="./<?//= $assets['main']['js'] ?? 'bundle.js'; ?>"></script>
 </body>
