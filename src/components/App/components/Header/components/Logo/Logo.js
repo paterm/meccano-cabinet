@@ -10,11 +10,11 @@ const cls = new BEMHelper('logo');
 
 function Logo({ sidebar }) {
     return (
-        <div
-            {...cls('', { open: sidebar.open })}
-            onClick={() => store.dispatch(toggleSidebar())}
-        >
-          <span {...cls('icon')}>
+        <div {...cls()}>
+          <span
+              {...cls('icon', { open: sidebar.open })}
+              onClick={() => store.dispatch(toggleSidebar())}
+          >
             <i />
             <i />
           </span>

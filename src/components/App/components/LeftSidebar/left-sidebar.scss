@@ -2,8 +2,14 @@
 
 .left-sidebar {
   flex: 0 0 $leftSidebarWidth;
+  margin-left: -$leftSidebarWidth;
   background-color: $white;
-  box-shadow: 1px 0 0px #F0F3F4;
+  box-shadow: 1px 0 0 #F0F3F4;
+  transition: margin-left .3s ease;
+
+  &--open {
+    margin-left: 0;
+  }
 
   &__project {
     display: flex;

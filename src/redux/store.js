@@ -3,7 +3,7 @@ import reducers from './reducers';
 
 const initialStore = {
     sidebar: {
-        open: false
+        open: true
     }
 };
 
