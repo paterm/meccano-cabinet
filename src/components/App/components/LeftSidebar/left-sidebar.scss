@@ -1,0 +1,33 @@
+@import "../../variables";
+
+.left-sidebar {
+  flex: 0 0 $leftSidebarWidth;
+  background-color: $white;
+  box-shadow: 1px 0 0px #F0F3F4;
+
+  &__project {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    padding: 0 20px;
+    border-bottom: 1px solid $ico;
+  }
+
+  &__menu {
+    padding: 40px 0;
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 5px;
+    font-size: 16px;
+    letter-spacing: 0.11px;
+    color: $icon2a;
+  }
+
+  &__menu-item-icon {
+    margin-right: 7px;
+  }
+}

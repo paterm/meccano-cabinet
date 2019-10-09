@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: $headerHeight;
+  padding: 0 25px;
+  background-color: $white;
+  @include boxShadow1();
+}

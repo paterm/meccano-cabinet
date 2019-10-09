@@ -1,0 +1,24 @@
+/* Colors */
+$ex: #C7C7C7;
+$ico: #D8DFE5;
+$ico2: #939EAB;
+$icon2a: #637280;
+$menu: #323C47;
+$arrow: rgba(60,60,67,.3);
+$white: #fff;
+$push: #F4F5F5;
+$c2: #C2C2C2;
+$c7: #C7C7C7;
+
+/* Shadows */
+@mixin boxShadow1 {
+  box-shadow: 0 4px 24px rgba(33, 62, 90, .1);
+}
+
+@mixin boxShadow2 {
+  box-shadow: 0 2px 8px rgba(33, 62, 90, .2);
+}
+
+/* Other vars */
+$headerHeight: 82px;
+$leftSidebarWidth: 268px;

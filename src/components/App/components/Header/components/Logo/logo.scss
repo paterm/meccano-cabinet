@@ -1,0 +1,34 @@
+@import "../../../../variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 34px;
+
+    i {
+      display: inline-block;
+      height: 3px;
+      background-color: $menu;
+
+      &:first-child {
+        width: 34px;
+        margin-bottom: 8px;
+      }
+
+      &:last-child {
+        width: 18px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 600;
+    color: $menu;
+  }
+}
