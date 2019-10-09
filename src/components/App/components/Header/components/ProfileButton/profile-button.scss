@@ -1,0 +1,29 @@
+@import "../../../../variables";
+
+.profile-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  padding: 21px;
+  cursor: pointer;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 17px;
+    background: $push;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 19px;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    color: $mainText;
+  }
+
+  &__arrow {
+    margin-left: auto;
+  }
+}

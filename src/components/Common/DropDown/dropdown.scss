@@ -1,0 +1,46 @@
+@import '../../App/variables';
+$namespace: '.dropdown';
+
+#{$namespace} {
+  position: absolute;
+  top: 100%;
+  min-width: 150px;
+  margin-top: -1px;
+  background-color: $white;
+  box-shadow: 0 4px 8px rgba(176, 190, 197, 0.24);
+  overflow: hidden;
+  word-break: break-all;
+  z-index: 10;
+
+  &__list {
+    position: relative;
+    max-height: 200px;
+    padding: 28px 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 30px;
+    font-size: 15px;
+    color: $mainText;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &--danger {
+      color: red;
+    }
+
+    &:active,
+    &:hover {
+      background-color: $push;
+      text-decoration: none;
+    }
+  }
+}

@@ -11,4 +11,16 @@
   padding: 0 25px;
   background-color: $white;
   @include boxShadow1();
+
+  &__right-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__right-bar-button {
+    padding: 0 35px;
+    background: none;
+    border: none;
+  }
 }
