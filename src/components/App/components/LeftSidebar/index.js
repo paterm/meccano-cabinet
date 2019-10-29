@@ -7,7 +7,7 @@ import './left-sidebar.scss';
 
 const cls = new BEMHelper('left-sidebar');
 
-function LeftSidebar({ sidebar }) {
+function Index({ sidebar }) {
   return (
     <aside {...cls('', { open: sidebar.open })}>
       <section {...cls('project')}>
@@ -36,4 +36,4 @@ function mapStateToProps({ sidebar }) {
     return { sidebar };
 }
 
-export default connect(mapStateToProps)(LeftSidebar);
+export default connect(mapStateToProps)(Index);

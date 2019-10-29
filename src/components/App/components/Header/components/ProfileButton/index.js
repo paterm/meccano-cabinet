@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BEMHelper from 'react-bem-helper';
 import ArrowIcon from './icons/arrow.svg';
-import DropDown from '../../../../../Common/DropDown/DropDown';
+import DropDown from '../../../../../Common/DropDown';
 import './profile-button.scss';
 
 const cls = new BEMHelper('profile-button');
 
-function ProfileButton() {
+function Index() {
     let dropDown = null;
     const listItems = [
         { label: 'Настройки аккаунта ', value: 'settings', closeOnClick: true },
@@ -28,4 +28,4 @@ function ProfileButton() {
     );
 }
 
-export default ProfileButton;
+export default Index;

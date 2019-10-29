@@ -1,14 +1,14 @@
 import React from 'react'
 import BEMHelper from 'react-bem-helper';
 import './header.scss';
-import Logo from './components/Logo/Logo';
+import Logo from './components/Logo';
 import ChatIcon from './icons/ChatIcon';
 import InfoIcon from './icons/InfoIcon';
-import ProfileButton from './components/ProfileButton/ProfileButton';
+import ProfileButton from './components/ProfileButton';
 
 const cls = new BEMHelper('header');
 
-function Header() {
+function Index() {
     return (
         <header {...cls()}>
             <Logo />
@@ -28,4 +28,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Index;

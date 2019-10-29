@@ -8,7 +8,7 @@ import { toggleSidebar } from '../../../../../../redux/actions';
 
 const cls = new BEMHelper('logo');
 
-function Logo({ sidebar }) {
+function Index({ sidebar }) {
     return (
         <div {...cls()}>
           <span
@@ -28,4 +28,4 @@ function mapStateToProps({ sidebar }) {
     return { sidebar };
 }
 
-export default connect(mapStateToProps)(Logo);
+export default connect(mapStateToProps)(Index);

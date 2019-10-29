@@ -7,7 +7,7 @@ import './dropdown.scss';
 
 const cls = new BEMHelper('dropdown');
 
-export default class DropDown extends PureComponent {
+export default class Index extends PureComponent {
     static propTypes = {
         className: PropTypes.string,
         items: PropTypes.array.isRequired,
@@ -94,7 +94,6 @@ export default class DropDown extends PureComponent {
 
                                 if (closeOnClick) this.close();
                             }}
-                            role='option'
                         >{label}</div>
                     ))}
                 </div>

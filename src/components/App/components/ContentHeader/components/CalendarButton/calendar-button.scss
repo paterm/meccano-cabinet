@@ -1,0 +1,14 @@
+@import "../../../../variables";
+
+.calendar-button {
+  position: relative;
+
+  &__button {
+    background: none;
+    border: none;
+
+    &:hover .calendar-button__icon path {
+      fill: $mainText
+    }
+  }
+}

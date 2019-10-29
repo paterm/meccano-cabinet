@@ -1,0 +1,27 @@
+@import "../../App/variables";
+
+.button-group {
+  border: 1px solid $c2;
+  border-radius: 3px;
+
+  &__button {
+    width: 165px;
+    height: 40px;
+    margin-right: 8px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    &:hover,
+    &--active {
+      background-color: $push;
+    }
+
+    & + & {
+      border-left: 1px solid $c2;
+    }
+  }
+}

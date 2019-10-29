@@ -3,9 +3,9 @@ import React from 'react';
 import './common.scss';
 import './app.scss';
 
-import Header from './components/Header/Header';
-import LeftSidebar from './components/LeftSidebar/LeftSidebar';
-import ContentHeader from './components/ContentHeader/ContentHeader';
+import Header from './components/Header';
+import LeftSidebar from './components/LeftSidebar';
+import ContentHeader from './components/ContentHeader';
 import BEMHelper from 'react-bem-helper';
 
 const cls = new BEMHelper('app');

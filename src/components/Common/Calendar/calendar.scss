@@ -1,0 +1,131 @@
+@import "../../App/variables";
+@import '~react-dates/lib/css/_datepicker.css';
+
+.calendar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0 4px 24px rgba(33, 62, 90, .15);
+
+  &__header {
+    background: $ico2;
+    padding: 20px;
+    color: $white;
+    text-align: left;
+  }
+
+  &__header-label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__header-year {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__header-month {
+    font-size: 34px;
+    line-height: 40px;
+    text-transform: capitalize;
+  }
+
+  &__footer {
+    padding: 32px 32px 10px;
+    background-color: #ffffff;
+    text-align: right;
+  }
+
+  &__footer-button {
+    padding: 5px 16px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $ico2;
+  }
+
+  &__prev-button,
+  &__next-button {
+    position: absolute;
+    top: 18px;
+    padding: 6px 9px;
+    background: none;
+    border: none;
+    line-height: .78;
+  }
+
+  &__prev-button {
+    left: 28px;
+  }
+
+  &__next-button {
+    right: 28px;
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__time-range-picker {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__time-range-picker-icon {
+    opacity: .8;
+  }
+
+  &__time-range-picker-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .CalendarMonth {
+    &_caption {
+      font-size: 14px;
+      text-transform: capitalize;
+
+      strong {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .CalendarDay {
+    position: relative;
+    border: none !important;
+    font-size: 12px;
+    line-height: 14px;
+
+    &__default {
+      &:hover {
+        border: none;
+        border-radius: 50%;
+      }
+    }
+
+    &__selected {
+      background: $ico2;
+      border: none;
+      color: #fff;
+      border-radius: 50%;
+
+      &:active,
+      &:hover {
+        background: $ico2;
+        border: none;
+      }
+    }
+  }
+}

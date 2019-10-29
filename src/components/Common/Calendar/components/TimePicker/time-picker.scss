@@ -1,0 +1,66 @@
+@import "../../../../App/variables";
+
+.time-picker {
+  position: relative;
+
+  &__value {
+    padding: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__picker {
+    position: absolute;
+    display: flex;
+    top: 100%;
+    left: 0;
+    width: 114px;
+    background: $white;
+    border: 1px solid $arrow;
+    z-index: 10;
+  }
+
+  &__picker-panel {
+    display: flex;
+    flex: 0 0 56px;
+    overflow: hidden;
+  }
+
+  &__picker-list {
+    width: 100%;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    color: $mainText;
+
+    &:first-child {
+      border-right: 1px solid #e9e9e9;
+    }
+
+    &:hover {
+      overflow-y: auto;
+    }
+
+  }
+
+  &__picker-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 24px;
+    box-sizing: content-box;
+    font-size: 12px;
+    cursor: pointer;
+
+    &--active,
+    &:hover,
+    &:focus {
+      background: $ico;
+      color: $mainText;
+    }
+  }
+}

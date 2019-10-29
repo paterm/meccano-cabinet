@@ -1,13 +1,39 @@
-.content-header {
+@import "../../variables";
+$namespace: '.content-header';
+
+#{$namespace} {
+  flex: 0 0 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 57px;
-  height: 65px;
+
+  &__group {
+    display: flex;
+    align-items: center;
+  }
+
+  &__group-item {
+    position: relative;
+    background: none;
+    border: none;
+
+    & + & {
+      margin-left: 25px;
+    }
+
+    &:hover {
+      color: $mainText;
+
+      #{$namespace}__icon > path {
+        fill: $mainText;
+      }
+    }
+  }
 
   &__link {
     & + & {
-      margin-left: 50px;
+      margin-left: 60px;
     }
   }
 }
