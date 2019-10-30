@@ -6,7 +6,7 @@ import EyeIcon from "../../../../../Common/Icons/EyeIcon";
 import '../chart.scss';
 
 const cls = new BEMHelper('chart');
-const ChartDynamicsOfTonality = () => {
+const ChartDemography = () => {
   const canvas = useRef(null);
 
   useEffect(() => {
@@ -15,26 +15,19 @@ const ChartDynamicsOfTonality = () => {
     const config = {
       type: 'line',
       data: {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         datasets: [{
           lineTension: 0,
-          backgroundColor: '#CAAEB7',
-          borderColor: '#CAAEB7',
+          backgroundColor: '#F58FE1',
+          borderColor: '#F58FE1',
           data: [1000, 50, 1800, 10, 1500, 500, 550, 1300, 1200, 1160, 1200, 2250, 1750],
           fill: false,
           borderWidth: 1
         }, {
           lineTension: 0,
-          backgroundColor: '#98D280',
-          borderColor: '#98D280',
+          backgroundColor: '#A221FD',
+          borderColor: '#A221FD',
           data: [200, 1500, 1200, 2010, 1400, 2000, 20, 500, 2400, 360, 1800, 1250, 750],
-          fill: false,
-          borderWidth: 1
-        }, {
-          lineTension: 0,
-          backgroundColor: '#4B68F5',
-          borderColor: '#4B68F5',
-          data: [2200, 500, 800, 250, 1500, 2000, 1550, 300, 200, 2460, 2200, 250, 50],
           fill: false,
           borderWidth: 1
         }]
@@ -53,7 +46,7 @@ const ChartDynamicsOfTonality = () => {
             display: true
           }],
           yAxes: [{
-            display: false
+            display: true
           }]
         }
       }
@@ -64,21 +57,17 @@ const ChartDynamicsOfTonality = () => {
   }, []);
 
   return (
-    <ChartCard title='Динамика по тональности'>
+    <ChartCard title='Демография: пол авторов'>
       <div {...cls()}>
         <section {...cls('data')}>
           <ul {...cls('legend')}>
             <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#CAAEB7'/>
+              <EyeIcon {...cls('legend-item-icon')} fill='#F58FE1'/>
               30%
             </li>
             <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#98D280'/>
+              <EyeIcon {...cls('legend-item-icon')} fill='#A221FD'/>
               50%
-            </li>
-            <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#4B68F5'/>
-              20%
             </li>
           </ul>
         </section>
@@ -95,4 +84,4 @@ const ChartDynamicsOfTonality = () => {
   );
 };
 
-export default ChartDynamicsOfTonality;
+export default ChartDemography;

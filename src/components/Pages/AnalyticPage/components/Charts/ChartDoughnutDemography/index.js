@@ -6,37 +6,21 @@ import EyeIcon from "../../../../../Common/Icons/EyeIcon";
 import '../chart.scss';
 
 const cls = new BEMHelper('chart');
-const ChartDynamicsOfTonality = () => {
+const ChartDoughnutDemography = () => {
   const canvas = useRef(null);
 
   useEffect(() => {
     if (!canvas) return;
 
     const config = {
-      type: 'line',
+      type: 'doughnut',
       data: {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        labels: [1, 2],
         datasets: [{
-          lineTension: 0,
-          backgroundColor: '#CAAEB7',
-          borderColor: '#CAAEB7',
-          data: [1000, 50, 1800, 10, 1500, 500, 550, 1300, 1200, 1160, 1200, 2250, 1750],
-          fill: false,
-          borderWidth: 1
+          backgroundColor: ['#1F78B4', '#A6CEE3'],
+          data: [60, 40],
+          weight: 30
         }, {
-          lineTension: 0,
-          backgroundColor: '#98D280',
-          borderColor: '#98D280',
-          data: [200, 1500, 1200, 2010, 1400, 2000, 20, 500, 2400, 360, 1800, 1250, 750],
-          fill: false,
-          borderWidth: 1
-        }, {
-          lineTension: 0,
-          backgroundColor: '#4B68F5',
-          borderColor: '#4B68F5',
-          data: [2200, 500, 800, 250, 1500, 2000, 1550, 300, 200, 2460, 2200, 250, 50],
-          fill: false,
-          borderWidth: 1
         }]
       },
       options: {
@@ -50,11 +34,15 @@ const ChartDynamicsOfTonality = () => {
         },
         scales: {
           xAxes: [{
-            display: true
+            display: false
           }],
           yAxes: [{
             display: false
           }]
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
         }
       }
     };
@@ -64,21 +52,17 @@ const ChartDynamicsOfTonality = () => {
   }, []);
 
   return (
-    <ChartCard title='Динамика по тональности'>
+    <ChartCard title='Демография: пол авторов'>
       <div {...cls()}>
         <section {...cls('data')}>
           <ul {...cls('legend')}>
             <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#CAAEB7'/>
-              30%
+              <EyeIcon {...cls('legend-item-icon')} fill='#1F78B4'/>
+              60%
             </li>
             <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#98D280'/>
-              50%
-            </li>
-            <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#4B68F5'/>
-              20%
+              <EyeIcon {...cls('legend-item-icon')} fill='#A6CEE3'/>
+              40%
             </li>
           </ul>
         </section>
@@ -95,4 +79,4 @@ const ChartDynamicsOfTonality = () => {
   );
 };
 
-export default ChartDynamicsOfTonality;
+export default ChartDoughnutDemography;

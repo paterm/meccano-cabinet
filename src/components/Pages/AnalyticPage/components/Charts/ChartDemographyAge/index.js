@@ -6,37 +6,26 @@ import EyeIcon from "../../../../../Common/Icons/EyeIcon";
 import '../chart.scss';
 
 const cls = new BEMHelper('chart');
-const ChartDynamicsOfTonality = () => {
+const ChartDemographyAge = () => {
   const canvas = useRef(null);
 
   useEffect(() => {
     if (!canvas) return;
 
     const config = {
-      type: 'line',
+      type: 'horizontalBar',
       data: {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        labels: ['от 60 до 100', 'от 40 до 60', 'от 30 до 40', 'от 20 до 30', 'от 15 до 20'],
         datasets: [{
-          lineTension: 0,
+          label: 'М',
+          backgroundColor: '#D8DFE5',
+          borderColor: '#D8DFE5',
+          data: [15, 90, 60, 80, 10],
+        }, {
+          label: 'Ж',
           backgroundColor: '#CAAEB7',
           borderColor: '#CAAEB7',
-          data: [1000, 50, 1800, 10, 1500, 500, 550, 1300, 1200, 1160, 1200, 2250, 1750],
-          fill: false,
-          borderWidth: 1
-        }, {
-          lineTension: 0,
-          backgroundColor: '#98D280',
-          borderColor: '#98D280',
-          data: [200, 1500, 1200, 2010, 1400, 2000, 20, 500, 2400, 360, 1800, 1250, 750],
-          fill: false,
-          borderWidth: 1
-        }, {
-          lineTension: 0,
-          backgroundColor: '#4B68F5',
-          borderColor: '#4B68F5',
-          data: [2200, 500, 800, 250, 1500, 2000, 1550, 300, 200, 2460, 2200, 250, 50],
-          fill: false,
-          borderWidth: 1
+          data: [-15, -65, -50, -90, -5],
         }]
       },
       options: {
@@ -50,10 +39,17 @@ const ChartDynamicsOfTonality = () => {
         },
         scales: {
           xAxes: [{
-            display: true
+            display: false,
+            stacked: true,
+            ticks: {
+              min: -100,
+              max: 100
+            },
           }],
           yAxes: [{
-            display: false
+            display: true,
+            stacked: true,
+            barThickness: 30,
           }]
         }
       }
@@ -61,24 +57,20 @@ const ChartDynamicsOfTonality = () => {
     const ctx = canvas.current.getContext('2d');
 
     new ChartJS(ctx, config);
-  }, []);
+  });
 
   return (
-    <ChartCard title='Динамика по тональности'>
+    <ChartCard title='Демография: пол и возраст авторов'>
       <div {...cls()}>
         <section {...cls('data')}>
           <ul {...cls('legend')}>
             <li {...cls('legend-item')}>
+              <EyeIcon {...cls('legend-item-icon')} fill='#D8DFE5'/>
+              М
+            </li>
+            <li {...cls('legend-item')}>
               <EyeIcon {...cls('legend-item-icon')} fill='#CAAEB7'/>
-              30%
-            </li>
-            <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#98D280'/>
-              50%
-            </li>
-            <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#4B68F5'/>
-              20%
+              Ж
             </li>
           </ul>
         </section>
@@ -95,4 +87,4 @@ const ChartDynamicsOfTonality = () => {
   );
 };
 
-export default ChartDynamicsOfTonality;
+export default ChartDemographyAge;

@@ -45,7 +45,8 @@ const ChartSource = () => {
             }
           }],
           yAxes: [{
-            display: true
+            display: true,
+            barThickness: 30,
           }]
         }
       }

@@ -18,6 +18,7 @@ const ChartQuantityOfMentions = () => {
       data: {
         labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         datasets: [{
+          lineTension: 0,
           backgroundColor: '#F056FE',
           borderColor: '#F056FE',
           data: [1000, 50, 1800, 10, 1500, 500, 550, 1300, 1200, 1160, 1200, 2250, 1750],

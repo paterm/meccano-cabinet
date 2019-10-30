@@ -6,9 +6,9 @@ import EyeIcon from "../../../../../Common/Icons/EyeIcon";
 import '../chart.scss';
 
 const cls = new BEMHelper('chart');
-const ChartAuthors = () => {
+const ChartCommunity = () => {
   const canvas = useRef(null);
-  const data = [20, 80, 45, 80, 45];
+  const data = [20, 98, 45, 80, 65];
 
   useEffect(() => {
     if (!canvas) return;
@@ -16,17 +16,15 @@ const ChartAuthors = () => {
     const config = {
       type: 'horizontalBar',
       data: {
-        labels: ['Автор 1', 'Автор 2', 'Автор 3', 'Автор 4', 'Автор 5'],
+        labels: ['ТНТ', 'СМИ', 'Россия 1', 'ВКонтаке', 'Facebook'],
         datasets: [{
-          label: 'Dataset 1',
-          backgroundColor: '#98D280',
-          borderColor: '#98D280',
+          barPercentage: 0.5,
+          barThickness: 6,
+          maxBarThickness: 8,
+          minBarLength: 2,
+          backgroundColor: '#D8DFE5',
+          borderColor: '#D8DFE5',
           data,
-        }, {
-          label: 'Dataset 2',
-          backgroundColor: '#CAAEB7',
-          borderColor: '#CAAEB7',
-          data: [15, 20, 0, 0, 40],
         }]
       },
       options: {
@@ -41,15 +39,13 @@ const ChartAuthors = () => {
         scales: {
           xAxes: [{
             display: false,
-            stacked: true,
             ticks: {
               min: 0,
               max: 100
-            },
+            }
           }],
           yAxes: [{
             display: true,
-            stacked: true,
             barThickness: 30,
           }]
         }
@@ -61,18 +57,16 @@ const ChartAuthors = () => {
   });
 
   return (
-    <ChartCard title='Авторы: тон'>
+    <ChartCard title='Сообщества'>
       <div {...cls()}>
         <section {...cls('data')}>
           <ul {...cls('legend')}>
-            <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#98D280'/>
-              80%
-            </li>
-            <li {...cls('legend-item')}>
-              <EyeIcon {...cls('legend-item-icon')} fill='#CAAEB7'/>
-              20%
-            </li>
+            {data.map((item, itemIndex) => (
+              <li {...cls('legend-item')} key={itemIndex}>
+                <EyeIcon {...cls('legend-item-icon')} fill='#D8DFE5'/>
+                {item}%
+              </li>
+            ))}
           </ul>
         </section>
 
@@ -88,4 +82,4 @@ const ChartAuthors = () => {
   );
 };
 
-export default ChartAuthors;
+export default ChartCommunity;
